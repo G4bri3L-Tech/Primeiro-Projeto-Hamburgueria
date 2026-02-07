@@ -1,0 +1,66 @@
+
+ header{
+    font-weight: bold;
+    font-family: "Bungee", sans-serif;
+}
+.pastelaria{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pastelaria img{
+    width: 100px;
+    height: 100px;
+}
+.cabecario {
+    font-weight: 100;
+    font-style: italic;
+}
+.cardapio{
+  text-align: center;
+  color: #FF4500;
+  font-family: "Roboto", sans-serif;
+}
+
+.pasteis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+} 
+.pasteis img{
+    width: 50px;
+    height: 50px;
+}
+.hamburguer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pastel{
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+.hamburguer img{
+    width: 50px;
+    height: 50px;
+}
+.batata{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.batata img{
+    width: 50px;
+    height: 50px;
+}
+.bebidas{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.bebidas img{
+    width: 60px;
+    height: 60px;
+}
