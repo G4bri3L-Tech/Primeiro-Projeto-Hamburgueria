@@ -1,0 +1,148 @@
+/* ===== PÁGINA CONTATO ===== */
+
+.pagina-contato .contato-area{
+  padding: 30px 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.pagina-contato .contato-card{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 183, 3, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.pagina-contato .contato-card h2{
+  color: #ffb703;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.pagina-contato .contato-card p{
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+/* Card principal (WhatsApp) ocupa a tela toda */
+.pagina-contato .contato-card.destaque{
+  grid-column: 1 / -1;
+}
+
+/* Botões */
+.pagina-contato .botao{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 14px;
+  padding: 13px 18px;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+/* WhatsApp */
+.pagina-contato .botao.whatsapp{
+  background: #ffb703;
+  color: #0b0b0b;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.pagina-contato .botao.whatsapp:hover{
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Maps */
+.pagina-contato .botao.maps{
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+.pagina-contato .botao.maps:hover{
+  background: rgba(255, 183, 3, 0.12);
+}
+
+/* Observação pequena */
+.pagina-contato .obs{
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 850px){
+  .pagina-contato .contato-area{
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-contato .contato-card.destaque{
+    grid-column: auto;
+  }
+}
+.pagina-contato{
+  background: radial-gradient(circle at top, #1a1a1a, #050505);
+  color: #ffffff;
+}
+/* Botão flutuante WhatsApp */
+.whats-fixo{
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  z-index: 9999;
+  transition: 0.2s;
+}
+
+.whats-fixo:hover{
+  transform: scale(1.08);
+}
+/* Faz o botão respeitar a largura do card */
+.pagina-contato .contato-card{
+  overflow: hidden;
+}
+
+/* Botão WhatsApp não estoura */
+.pagina-contato .botao.whatsapp{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* ===== RESPONSIVO (CONTATO) ===== */
+@media (max-width: 600px){
+
+  .contato-area{
+    grid-template-columns: 1fr;
+  }
+
+  .contato-card{
+    padding: 16px;
+  }
+
+  .botao.whatsapp{
+    font-size: 1.05rem;
+  }
+
+  .whats-fixo{
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    bottom: 14px;
+    right: 14px;
+  }
+}

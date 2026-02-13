@@ -1,0 +1,170 @@
+.hero {
+  min-height: 100vh;
+  background-image: url(https://img.freepik.com/vetores-gratis/padrao-de-fundo-de-hamburguer_474888-6821.jpg?semt=ais_user_personalization&w=740&q=80);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0f0f0f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0px;
+  margin-top: 0px;
+  overflow: hidden;
+}
+.overlay{
+  width: min(620px, 92%);
+  padding: 46px 26px;
+  text-align: center;
+  color: white;
+
+  background: rgba(0, 0, 0, 35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 26px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0, 0.35);
+  animation: aparecerSuave 0.8s ease-out;
+}
+@keyframes aparecerSuave{
+  from{
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  opacity: 0.92;
+  margin-bottom: 22px;
+  line-height: 1.4;
+}
+
+.botao.grande {
+  font-size: 1.1rem;
+  padding: 14px 24px;
+  border-radius: 16px;
+  display: inline-block;
+  text-decoration: none;
+
+  background: #ffb703;
+  color: #111;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+.botao.grande:hover{
+  transform: scale(1.05);
+}
+
+.topo{
+  text-align: center;
+  padding: 30px 0;
+  color: white;
+
+  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+  border-bottom: 4px solid #ffb703;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.topo h1{
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
+  color: #ffb703;
+}
+ .top p{
+  font-size: 1rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+ }
+
+ .rodape{
+  background: #0f0f0f;
+  color: white;
+ }
+
+ .rodape p{
+  margin: 0;
+  opacity: 0.85;
+ }
+ /* ===== RESPONSIVO (INDEX) ===== */
+@media (max-width: 600px){
+
+  .container{
+    width: 92%;
+  }
+
+  .topo{
+    padding: 18px 0;
+  }
+
+  .topo h1{
+    font-size: 1.4rem;
+    line-height: 1.2;
+  }
+
+  .topo p{
+    font-size: 0.95rem;
+  }
+
+  .menu{
+    gap: 8px;
+  }
+
+  .menu a{
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .hero{
+    min-height: 80vh;
+    padding: 18px;
+    border-radius: 0;
+  }
+
+  .overlay{
+    width: 100%;
+    padding: 18px;
+  }
+
+  .hero h2{
+    font-size: 1.8rem;
+  }
+
+  .hero p{
+    font-size: 1rem;
+  }
+
+  .botao.grande{
+    width: 100%;
+    text-align: center;
+  }
+
+  .rodape{
+    padding: 16px;
+  }
+
+  .rodape p{
+    font-size: 0.9rem;
+  }
+}

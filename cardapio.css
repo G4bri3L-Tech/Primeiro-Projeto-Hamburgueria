@@ -1,0 +1,240 @@
+/* ===== CARDÁPIO ===== */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* largura padrão */
+.container{
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* topo */
+.topo{
+  background: #0f0f0f;
+  border-bottom: 4px solid #ffb703;
+  padding: 22px 0;
+  text-align: center;
+}
+
+.topo h1{
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.topo p{
+  opacity: 0.8;
+  font-size: 1rem;
+}
+
+/* menu */
+.menu{
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu a{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.menu a:hover{
+  background: rgba(255, 183, 3, 0.12);
+}
+
+.menu a.ativo{
+  background: #ffb703;
+  color: #0b0b0b;
+  border: 1px solid #ffb703;
+}
+
+/* área principal */
+main{
+  padding: 30px 0 40px;
+}
+
+/* categoria */
+.categoria{
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 183, 3, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+/* título categoria */
+.categoria h2{
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #ffb703;
+}
+
+/* item */
+.item{
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 12px;
+  border-radius: 14px;
+  transition: 0.2s;
+}
+
+.item:hover{
+  background: rgba(255, 183, 3, 0.08);
+}
+
+.item h3{
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.item p{
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+/* preço */
+.preco{
+  font-weight: 800;
+  color: #ffb703;
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
+/* botão final */
+.botao.pedir{
+  display: block;
+  text-decoration: none;
+  font-weight: 800;
+  border-radius: 14px;
+  padding: 15px 18px;
+  background: #ffb703;
+  color: #0b0b0b;
+  width: 100%;
+  text-align: center;
+  margin: 25px auto 0;
+  font-size: 1.1rem;
+  transition: 0.2s;
+  max-width: 520px;
+}
+
+.botao.pedir:hover{
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* rodapé */
+.rodape{
+  background: #0f0f0f;
+  border-top: 4px solid #ffb703;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+}
+
+.rodape p{
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* responsivo */
+@media (max-width: 520px){
+  .topo h1{
+    font-size: 1.6rem;
+  }
+
+  .categoria{
+    padding: 14px;
+  }
+
+  .item{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preco{
+    font-size: 1rem;
+  }
+}
+
+.pagina-cardapio main.container{
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    padding: 30px 0 40px;
+    align-items: start;
+    width: min(820px, 92%);
+}
+
+.pagina-cardapio.categoria{
+    margin-bottom: 0;
+}
+.pagina-cardapio.categoria{
+    grid-column: 1/-1;
+}
+@media (max-width: 850px){
+    .pagina-cardapio main.conteiner{
+        grid-template-columns: 1fr;
+    }
+.pagina-cardapio.categoria{
+    grid-column: auto;
+}    
+}    
+
+/* impede estouro horizontal */
+.pagina-cardapio .categoria,
+.pagina-cardapio .item{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* permite o texto quebrar */
+.pagina-cardapio .item div{
+  min-width: 0;
+}
+
+/* força quebra de palavras longas */
+.pagina-cardapio .item h3,
+.pagina-cardapio .item p{
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+/* ===== RESPONSIVO (CARDÁPIO) ===== */
+@media (max-width: 600px){
+
+  .categoria{
+    padding: 14px;
+  }
+
+  .categoria h2{
+    font-size: 1.25rem;
+  }
+
+  .item{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .preco{
+    font-size: 1.05rem;
+  }
+
+  .botao.pedir{
+    max-width: 100%;
+  }
+}
+
